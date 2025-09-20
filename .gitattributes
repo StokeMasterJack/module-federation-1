@@ -1,0 +1,27 @@
+# Auto-detect text files and ensure consistent LF line endings
+* text=auto eol=lf
+
+# Treat JS/TS/JSON/YAML/etc. as text
+*.js   text
+*.jsx  text
+*.ts   text
+*.tsx  text
+*.json text
+*.yaml text
+*.yml  text
+*.css  text
+*.html text
+*.md   text
+
+# Binary files (no diff/merge)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+
+# Lockfiles (keep exact diffs)
+package-lock.json -diff
+yarn.lock        -diff
+pnpm-lock.yaml   -diff
