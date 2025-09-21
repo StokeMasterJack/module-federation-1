@@ -19,17 +19,24 @@ module.exports = (_, argv) => ({
         ],
     },
     plugins: [
+
+
+
+
         new ModuleFederationPlugin({
             name: 'mui7',
             filename: 'remoteEntry.js',
-            exposes: {
-                './V7Page': './src/V7Page',
-            },
+            exposes: { './V7Page': './src/V7Page' },
             shared: {
-                react: { singleton: true, requiredVersion: false, strictVersion: false },
-                'react-dom': { singleton: true, requiredVersion: false, strictVersion: false },
+                react:      { singleton: true, eager: true, requiredVersion: false, strictVersion: false, import: 'react' },
+                'react-dom':{ singleton: true, eager: true, requiredVersion: false, strictVersion: false, import: 'react-dom' },
             },
         }),
+
+
+
+
+
         new HtmlWebpackPlugin({ template: 'public/index.html' }),
     ],
     devServer: {

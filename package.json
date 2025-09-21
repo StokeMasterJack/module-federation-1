@@ -1,11 +1,13 @@
 {
-  "name": "vite1",
+  "name": "module-federation-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack.config.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode production",
+    "tsc": "tsc --build tsconfig.json --verbose",
+    "tsc-clean": "tsc --build --clean tsconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -16,19 +18,29 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.2",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "@tanstack/query-core": "^5.89.0",
+    "@tanstack/react-query": "^5.89.0",
+    "@tanstack/react-router": "^1.131.49",
+    "@tanstack/react-router-devtools": "^1.131.49",
+    "axios": "^1.12.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@swc/core": "^1.13.5",
     "@types/node": "^24.5.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "html-webpack-plugin": "^5.6.4",
     "swc-loader": "^0.2.6",
     "typescript": "^5.9.2",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
+  },
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }
