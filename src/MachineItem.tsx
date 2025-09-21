@@ -1,6 +1,6 @@
-// import {createFileRoute} from '@tanstack/react-router';  TODO: Figure this out
+
 import {TextField, Stack, Autocomplete} from '@mui/material';
-// import z from 'zod';  TODO: Figure this out
+
 import {useQuery} from '@tanstack/react-query';
 import axios, {AxiosResponse} from 'axios';
 import * as React from 'react';
@@ -18,6 +18,9 @@ export type Row2 = {
 
     extraInfo?: string
 }
+
+// import {createFileRoute} from '@tanstack/react-router';  TODO: Figure this out
+// import z from 'zod';  TODO: Figure this out
 
 // TODO: Figure this out
 // export const Route = createFileRoute('/dave')({
