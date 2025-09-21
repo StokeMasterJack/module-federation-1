@@ -7,6 +7,11 @@ import axios from 'axios';
 import {QueryClientProvider, useQuery} from '@tanstack/react-query';
 import {QueryClient} from '@tanstack/query-core';
 
+
+// import {createFileRoute} from '@tanstack/react-router';  TODO: Figure this out
+// import z from 'zod';  TODO: Figure this out
+
+
 // TODO: Figure this out
 // export const Route = createFileRoute('/dave')({
 //     validateSearch: z.object({
